@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import javax.swing.*;
+import java.awt.*;
 
-/**
- *
- * @author ASUS
- */
 public class SignInFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SignInFrame
-     */
+
     public SignInFrame() {
         initComponents();
     }
@@ -226,7 +217,24 @@ public class SignInFrame extends javax.swing.JFrame {
     }
 
     private void signBTNActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
+        if (firstNameTXT.getText().isEmpty() || lastNameTXT.getText().isEmpty() ||
+                    userNameTXT.getText().isEmpty() || passTXT.getText().isEmpty() ||
+                            emailTXT.getText().isEmpty() || addressArea.getText().isEmpty() ||
+                                        phoneNumberTXT.getText().isEmpty()){
+
+            JOptionPane.showMessageDialog(null," please fill all options !!! ");
+
+        }
+        else {
+            Client client =
+                    new Client(firstNameTXT.getText() ,lastNameTXT.getText() ,
+                                        userNameTXT.getText() , passTXT.getText() ,
+                                                    phoneNumberTXT.getText() ,emailTXT.getText() ,
+                                                            addressArea.getText());
+            dispose();
+            JOptionPane.showMessageDialog(null,"succssefully signed in ");
+        }
     }
 
 
