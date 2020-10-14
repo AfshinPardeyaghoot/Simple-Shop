@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 public class FirstFrame extends javax.swing.JFrame {
 
     /**
@@ -66,11 +69,12 @@ public class FirstFrame extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        dispose();
+        new SignInFrame().setVisible(true);
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
 
