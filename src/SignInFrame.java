@@ -234,6 +234,7 @@ public class SignInFrame extends javax.swing.JFrame {
                                                             addressArea.getText());
             dispose();
             JOptionPane.showMessageDialog(null,"succssefully signed in ");
+            new ShopMenuFrame(client).setVisible(true);
         }
     }
 
